@@ -1,0 +1,20 @@
+#id_gender,#id_job_city{
+    list-style-type: none;
+    display: inline-flex;
+}
+
+#deltailid{
+    color: rgb(238, 11, 83);
+   
+}
+.customcolor{
+    background-color:rgb(238, 11, 83); 
+    color: white;
+}
+.fontt{
+    font-family: "Lucida Console", "Courier New", monospace;
+    
+}
+.viewfont{
+    font-size: 20px;
+}

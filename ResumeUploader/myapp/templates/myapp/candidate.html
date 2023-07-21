@@ -1,0 +1,30 @@
+
+{%extends 'myapp/base.html'%}
+{% load static %}
+{%block css%}<link rel="stylesheet" href="{% static 'myapp/css/style.css'%}"> {%endblock%}
+{%block title%}Candiadate Detail{%endblock%}
+{%block content%}
+<div class="container">
+    <h1 class="alert-info text-center p-3 shadow mb-4 mt-3 ">Candidate Detail</h1>
+    <div class="row" >
+        <div class="col-sm-10 shadow p-5 offset-sm-1 fontt" style="border-radius: 5%;">
+            <h3 class="text-center">{{info.fname}}  {{info.lname}}</h3>
+            <hr style="border-top: 3px solid rgb(8, 8, 8);">
+            <img src="{{info.profile.url}}" alt="" class="img-fluid img-thumbnail mt-5 float-end rounded-circle" width="200", height="200">
+            
+            <p>Aplicant No: {{info.id}}</p>
+            <p>Date of Birth: {{info.date_of_birth}}</p>
+            <p>Present Address: {{info.present_address}}</p>
+            <p>Permanent Address: {{info.permanent_address}}</p>
+            <p>Nationality: {{info.national}}</p>
+            <p>Mobile No: {{info.mobile}}</p>
+            <p>Email ID:  {{info.email}}</p>
+            <p>LinkedIn ID: {{info.linkedin}}</p>
+            <p>Preferred Job: {{info.preferred_job}}</p>
+            <p>Preferred Job Loctaion: {{info.job_city}}</p>
+            <p>Attachment: <a href="{{info.my_file.url}}" class="btn customcolor">Download</a></p>
+
+        </div>
+    </div>
+</div>
+{%endblock%}

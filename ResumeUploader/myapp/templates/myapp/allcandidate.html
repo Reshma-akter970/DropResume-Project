@@ -1,0 +1,25 @@
+{%extends 'myapp/base.html'%}
+{% load static %}
+{%block css%}<link rel="stylesheet" href="{% static 'myapp/css/style.css'%}"> {%endblock%}
+{%block title%}Candiadate Detail{%endblock%}
+{%block content%}
+<div class="container">
+    <h1 class="text-center p-2 mt-3 alert-info">All Candidates</h1>
+        <div class="row">
+            {%for fm in form%}
+            <div class="col-sm-3 ">
+                <div class="card m-2 " style="width: 16rem">
+                    <img src="{{fm.profile.url}}" class="image-thumbnail card-img-top" alt="Card image cap" style="width: 100%;height:18vw;object-fit: cover;">
+                    <div class="card-body">
+                    <small> <b><span>{{fm.fname}}</span> <span>{{fm.lname}}</span></b>  </small>
+                    </div>
+                    <a href="{% url 'candidate' fm.id %}" class="btn  btn-sm m-1 customcolor viewfont"><b>View</b></a>
+                </div>
+            </div>
+            {%endfor%}
+        </div>
+        
+    </div>
+
+
+{%endblock%}
